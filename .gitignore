@@ -1,0 +1,26 @@
+# User environment variables (contains sensitive database passwords)
+.env
+*.env
+backend/.env
+
+# Node dependencies
+node_modules/
+fitness-coach/frontend/node_modules/
+dist/
+fitness-coach/frontend/dist/
+
+# Python cache and virtual environments
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+venv/
+ENV/
+backend/__pycache__/
+backend/routes/__pycache__/
+
+# IDE/System files
+.DS_Store
+Thumbs.db
+.vscode/

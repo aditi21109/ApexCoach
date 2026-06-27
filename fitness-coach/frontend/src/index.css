@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-[#FAF6EE] text-[#1E1E24] min-h-screen antialiased;
+    font-family: 'Outfit', 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+}
+
+/* Sidebar Custom Styling */
+.dark-sidebar {
+  background-color: #131313;
+  color: #ECECEC;
+  border-radius: 28px;
+}
+
+/* Pastel Panels */
+.pastel-yellow {
+  background-color: #FBE39A;
+  border-radius: 24px;
+}
+
+.pastel-pink {
+  background-color: #F3C1E2;
+  border-radius: 24px;
+}
+
+.pastel-green {
+  background-color: #BAC8A5;
+  border-radius: 24px;
+}
+
+.pastel-blue {
+  background-color: #B7CBEB;
+  border-radius: 24px;
+}
+
+.light-panel {
+  background-color: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+  border-radius: 24px;
+}
+
+/* Scrollbar customization */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 9px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+/* Neobrutalist input box styles */
+.flat-input {
+  @apply bg-[#FAF6EE] border border-slate-300 text-slate-800 placeholder-slate-400 focus:border-[#131313] focus:ring-1 focus:ring-[#131313] transition duration-150;
+  border-radius: 12px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
