@@ -2,6 +2,7 @@ from fastapi import FastAPI  # type: ignore
 from fastapi.middleware.cors import CORSMiddleware  # type: ignore
 from routes import workouts, goals, ai_coach, users  # type: ignore
 import uvicorn  # type: ignore
+import os
 
 app = FastAPI(
     title="AI Fitness Coach & Workout Tracker API",
@@ -37,4 +38,6 @@ def health_check():
     return {"status": "healthy"}
 
 if __name__ == "__main__":
-    uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=True)
+    port = int(os.getenv("PORT", 8000))
+    uvicorn.run("main:app", host="0.0.0.0", port=port, reload=True)
+

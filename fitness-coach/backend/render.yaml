@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: apex-coach-api
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: MONGO_URI
+        sync: false  # Set manually in Render dashboard
+      - key: DB_NAME
+        value: fitness_coach_db
+      - key: GEMINI_API_KEY
+        sync: false  # Set manually in Render dashboard
+      - key: PYTHON_VERSION
+        value: "3.11.4"
